@@ -1,29 +1,40 @@
-import React from 'react';
-import {useEffect, useState} from 'react';
+import React from "react";
+import { useEffect, useState } from "react";
 
+function SearchBar(props:
+    string | number | readonly string[] | undefined
+  ) {
+  const [userInput, setUserInput] = useState<
+    string | number | readonly string[] | undefined
+  >("");
 
-function SearchBar(){
-const [userInput, setUserInput]= useState<React.ChangeEvent<HTMLInputElement>>();
+  function handleSubmit(event: any) {
+    console.log("pizza");
+    event.preventDefault();
+    console.log(event);
+  }
 
-function handleSubmit(){};
-
-function handleChange(){
-
-}
-    return(<div>Search Bar :)
-
-
-<form onSubmit={handleSubmit}>
+  function handleChange() {}
+  return (
+    <div>
+      Search Bar :)
+      <form onSubmit={handleSubmit}>
         <label>
           Name:
-          <input type="text" value={userInput} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setUserInput(e)} />
+          <input
+            type="text"
+            value={userInput}
+            onChange={(e) => {
+              setUserInput(e.target.value);
+            }}
+          />
         </label>
-        <input type="submit" value="Submit" />
+        <button type="button" value="Submit" onClick={(e) => handleSubmit(e)}>
+          Submit
+        </button>
       </form>
-
-
-
-    </div>)
-};
+    </div>
+  );
+}
 
 export default SearchBar;
