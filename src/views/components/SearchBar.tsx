@@ -2,23 +2,17 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 function SearchBar(props:
-    string | number | readonly string[] | undefined
+   {userInput:any, setUserInput:any, handleSubmit:any}
   ) {
-  const [userInput, setUserInput] = useState<
-    string | number | readonly string[] | undefined
-  >("");
+ const userInput=props.userInput;
+ const setUserInput=props.setUserInput;
+const handleSubmit=props.handleSubmit;
 
-  function handleSubmit(event: any) {
-    console.log("pizza");
-    event.preventDefault();
-    console.log(event);
-  }
 
-  function handleChange() {}
   return (
     <div>
       Search Bar :)
-      <form onSubmit={handleSubmit}>
+      <form >
         <label>
           Name:
           <input
@@ -29,7 +23,7 @@ function SearchBar(props:
             }}
           />
         </label>
-        <button type="button" value="Submit" onClick={(e) => handleSubmit(e)}>
+        <button type="button" value="Submit" onClick={(e) => handleSubmit(e,userInput)}>
           Submit
         </button>
       </form>
