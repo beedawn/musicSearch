@@ -1,4 +1,4 @@
-interface musicData {
+interface MusicData {
     album: {
       cover: string,
       cover_big:string,
@@ -38,4 +38,4 @@ interface musicData {
   
   }
 
-  export default musicData;
+  export default MusicData;
