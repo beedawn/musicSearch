@@ -1,7 +1,7 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
 
-import Options from '../secrets/Options';
+import Options from './secrets/Options';
 
 interface musicData {
   album: {
