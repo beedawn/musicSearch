@@ -13,7 +13,8 @@ const handleSubmit=props.handleSubmit;
     <div className="searchBar">
      
       <form onSubmit={(e) => handleSubmit(e,userInput)}>
-        <label>
+        
+        <div><label>
           
           <input className="inputOne"
             type="text"
@@ -25,8 +26,10 @@ const handleSubmit=props.handleSubmit;
             }}
           />
         </label>
+        </div>
+        <div className="submitBtnContainer">
         <Button className="submitBtn" color="primary" type="button" value="Submit" onClick={(e) => handleSubmit(e,userInput)} >Submit</Button>
-         
+        </div>
       </form>
     </div>
   );

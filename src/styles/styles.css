@@ -25,9 +25,14 @@ height:100%;
     color:rgb(238, 245, 240);
 }
 
+
  .darkModeTheme .inputOne{
     background-color: rgb(110, 108, 143);
     color:rgb(244, 217, 250);
+}
+
+.darkModeTheme .inputOne::placeholder{
+    color:white;
 }
 .darkModeTheme .submitBtn{
     background-color: rgb(34, 0, 156);
@@ -36,6 +41,21 @@ height:100%;
 
 
 /* light mode theme */
+.submitBtnContainer {
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:0;
+}
+.submitBtn{
+    margin:7px;
+}
+.inputOne{border-radius:35px;
+border-width:1px;
+border-color:grey;
+padding:7px;
+}
 .searchBar{
     display:flex;
     justify-content: center;
