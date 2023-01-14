@@ -4,21 +4,13 @@ import { MDBSwitch } from "mdb-react-ui-kit";
 import Main from "./Main";
 import '../styles/styles.css';
 function ThemeHandler() {
-  const [darkModeTheme, setDarkModeTheme]=useState(false);
-
-  if(darkModeTheme){
+  const [darkModeTheme, setDarkModeTheme]=useState(true);
+console.log(!darkModeTheme? "darkModeTheme":"");
 return(
   
-  <div><MDBSwitch id='darkMode' className="switch" label='darkmode' onClick={()=>setDarkModeTheme(!darkModeTheme)}/>
+  <div className={!darkModeTheme? "darkModeTheme":""}><MDBSwitch id='darkMode' className="switch" label='darkmode' onClick={()=>setDarkModeTheme(!darkModeTheme)}/>
   <Main /></div>
 )
-  }else{
-  return (
-    <div className="darkTheme">
-     
-     <MDBSwitch id='darkMode' className="switch" label='darkmode' onClick={()=>setDarkModeTheme(!darkModeTheme)}/>  <div className="darkTheme"><Main/>pizza</div>
-    </div>
-  );}
 }
 
 export default ThemeHandler;
