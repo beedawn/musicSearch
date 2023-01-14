@@ -9,15 +9,14 @@ function ThemeHandler() {
   if(darkModeTheme){
 return(
   
-  <div><MDBSwitch id='darkMode' className="switch" label='darkmode'/>
+  <div><MDBSwitch id='darkMode' className="switch" label='darkmode' onClick={()=>setDarkModeTheme(!darkModeTheme)}/>
   <Main /></div>
 )
   }else{
   return (
     <div className="darkTheme">
      
-      <MDBSwitch id='darkMode' className="switch" label='darkmode'/>
-     <div className="darkTheme"><Main/>pizza</div>
+     <MDBSwitch id='darkMode' className="switch" label='darkmode' onClick={()=>setDarkModeTheme(!darkModeTheme)}/>  <div className="darkTheme"><Main/>pizza</div>
     </div>
   );}
 }
