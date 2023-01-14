@@ -11,7 +11,7 @@ const handleSubmit=props.handleSubmit;
 
   return (
     <div>
-      Search Bar :)
+     
       <form >
         <label>
           Name:

@@ -3,19 +3,24 @@ import { useEffect, useState } from "react";
 import MusicData from "../../interfaces/MusicData";
 
 function Results(props:{
-  query:string
+  query:string,
+  handleData:any
 
 }) {
-  const [handleData, setHandleData] = useState<MusicData | undefined>(
-    undefined
-  );
 
-  console.log("uyoloy");
-  console.log(handleData);
-  while (!handleData) {
+ 
+ const handleData=props.handleData;
+  if (!handleData) {
+    console.log(handleData);
     return <div>Loading</div>;
+  
+  }else
+  { console.log(handleData);
+  return <div>
+
+{handleData.map((song:any)=><div><p>song title: {song.title}</p><p>artist name: {song.artist.name}</p></div>)}
+  </div>;
   }
-  return <div>Search Land</div>;
 }
 
 export default Results;
