@@ -2,7 +2,7 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import Results from './components/Results';
 import SearchBar from './components/SearchBar';
-
+import { Row } from 'reactstrap';
 import Options from "../secrets/Options";
 
 function Main() {

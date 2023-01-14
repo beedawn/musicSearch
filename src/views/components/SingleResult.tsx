@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import MusicData from "../../interfaces/MusicData";
-import { Card,CardBody,CardTitle,CardSubtitle,CardText,CardLink } from "reactstrap"; 
+import { Row, Card,CardBody,CardTitle,CardSubtitle,CardText,CardLink } from "reactstrap"; 
 function SingleResult(props:{
 song:any
 
@@ -14,10 +14,9 @@ const song = props.song;
     <div>
         
         
-        
         <Card
   style={{
-    width: '18rem'
+    width:"25%"
   }}
 >
   <CardBody>
@@ -33,7 +32,7 @@ const song = props.song;
   </CardBody>
   <img
     alt="Card cap"
-    src={song.album.cover}
+    src={song.album.cover_xl}
     width="100%"
   />
   <CardBody>
@@ -51,8 +50,7 @@ const song = props.song;
 </Card>
         
         
-        
-        <div>song title: </div><div>artist name: {song.artist.name}</div><img src={song.album.cover}/></div>
+        </div>
   )}
 
 

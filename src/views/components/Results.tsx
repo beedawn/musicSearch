@@ -16,7 +16,7 @@ function Results(props:{
   
   }else
   { console.log(handleData);
-  return <div>
+  return <div style={{display:"inline-block"}}>
 
 {handleData.map((song:any)=><SingleResult song={song} />)}
   </div>;
