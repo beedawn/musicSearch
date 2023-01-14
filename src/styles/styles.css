@@ -1,6 +1,4 @@
-.singleItems{
-    display:inline-block;
-}
-.switch{
-    backgroundolor:red;
+.darkTheme{
+    background-color:rgb(23, 23, 21) ;
+height:100vh;
 }
