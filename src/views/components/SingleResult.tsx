@@ -25,7 +25,7 @@ function SingleResult(props: { song: any }) {
       >
         <CardBody>
           <CardTitle tag="h5">{song.title}</CardTitle>
-          <CardSubtitle className="mb-2 text-muted" tag="h6">
+          <CardSubtitle className="artistName mb-2" tag="h6">
             {song.artist.name}
           </CardSubtitle>
         </CardBody>

@@ -3,3 +3,48 @@
     min-height:100vh;
 height:100%;
 }
+
+.darkModeTheme .card{
+    background-color: rgb(110, 110, 126);
+    color:rgb(228, 228, 228);
+}
+.darkModeTheme {
+    color:lightslategray;
+}
+
+.darkModeTheme .artistName{
+    color:rgb(241, 129, 241);
+}
+
+
+.darkModeTheme a{
+    color:rgb(214, 199, 205);
+}
+
+.darkModeTheme a:hover{
+    color:rgb(238, 245, 240);
+}
+
+
+
+/* light mode theme */
+.searchBar{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.togglePadding{
+    padding:5px;
+}
+.artistName{
+    color:darkorchid
+    }
+
+    a{
+        color:rgb(49, 159, 255);
+    }
+
+    a:hover{
+        color:rgb(2, 115, 214);
+    }

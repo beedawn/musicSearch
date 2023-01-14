@@ -25,7 +25,7 @@ function Main() {
   }
 
   return (
-    <div>
+    <div className="searchBar">
       <SearchBar
         userInput={userInput}
         setUserInput={setUserInput}
