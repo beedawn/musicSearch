@@ -48,8 +48,8 @@ const song = props.song;
     <CardLink href={song.artist.link}>
       Link to Artist
     </CardLink>
-    <CardLink href="#">
-      Preview Song
+    <CardLink href={song.link}>
+      Song Info
     </CardLink>
   </CardBody>
 </Card>
