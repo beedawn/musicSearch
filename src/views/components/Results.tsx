@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import MusicData from "../../interfaces/MusicData";
-
+import SingleResult from "./SingleResult";
 function Results(props:{
   query:string,
   handleData:any
@@ -18,7 +18,7 @@ function Results(props:{
   { console.log(handleData);
   return <div>
 
-{handleData.map((song:any)=><div><p>song title: {song.title}</p><p>artist name: {song.artist.name}</p></div>)}
+{handleData.map((song:any)=><SingleResult song={song} />)}
   </div>;
   }
 }
