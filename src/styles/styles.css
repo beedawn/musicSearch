@@ -25,6 +25,14 @@ height:100%;
     color:rgb(238, 245, 240);
 }
 
+ .darkModeTheme .inputOne{
+    background-color: rgb(110, 108, 143);
+    color:rgb(244, 217, 250);
+}
+.darkModeTheme .submitBtn{
+    background-color: rgb(34, 0, 156);
+    color:rgb(255, 255, 255);
+}
 
 
 /* light mode theme */
@@ -32,6 +40,8 @@ height:100%;
     display:flex;
     justify-content: center;
     align-items:center;
+    margin:auto;
+    padding-bottom:35px;
 }
 
 .togglePadding{

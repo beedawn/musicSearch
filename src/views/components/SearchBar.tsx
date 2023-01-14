@@ -10,13 +10,14 @@ const handleSubmit=props.handleSubmit;
 
 
   return (
-    <div>
+    <div className="searchBar">
      
       <form onSubmit={(e) => handleSubmit(e,userInput)}>
         <label>
-          Name:
-          <input
+          
+          <input className="inputOne"
             type="text"
+            placeholder="Search value..."
             value={userInput}
             onChange={(e) => {
               setUserInput(e.target.value);
@@ -24,7 +25,7 @@ const handleSubmit=props.handleSubmit;
             }}
           />
         </label>
-        <Button color="primary" type="button" value="Submit" onClick={(e) => handleSubmit(e,userInput)} >Submit</Button>
+        <Button className="submitBtn" color="primary" type="button" value="Submit" onClick={(e) => handleSubmit(e,userInput)} >Submit</Button>
          
       </form>
     </div>
