@@ -16,10 +16,10 @@ function Results(props:{
   
   }else
   { console.log(handleData);
-  return <div style={{display:"inline-block"}}>
+  return <>
 
-{handleData.map((song:any)=><SingleResult song={song} />)}
-  </div>;
+{handleData.map((song:any)=><SingleResult key={song.id} song={song} />)}
+  </>;
   }
 }
 

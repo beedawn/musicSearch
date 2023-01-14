@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import MusicData from "../../interfaces/MusicData";
-import { Row, Card,CardBody,CardTitle,CardSubtitle,CardText,CardLink } from "reactstrap"; 
+import {Col, Row, Card,CardBody,CardTitle,CardSubtitle,CardText,CardLink } from "reactstrap"; 
 function SingleResult(props:{
 song:any
 
@@ -11,12 +11,11 @@ const song = props.song;
 
 
 
-    <div>
-        
-        
+    
+      <Col>  
         <Card
   style={{
-    width:"25%"
+    width:"100%"
   }}
 >
   <CardBody>
@@ -48,9 +47,9 @@ const song = props.song;
     </CardLink>
   </CardBody>
 </Card>
+</Col>
         
         
-        </div>
   )}
 
 

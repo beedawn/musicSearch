@@ -2,7 +2,7 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import Results from './components/Results';
 import SearchBar from './components/SearchBar';
-import { Row } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import Options from "../secrets/Options";
 
 function Main() {
@@ -33,11 +33,11 @@ function Main() {
       }
     
   return (
-    <div className="App">
+    <div>
         <SearchBar userInput={userInput} setUserInput={setUserInput} handleSubmit={handleSubmit}/>
-   
-     {handleData!=undefined? <Results query={userInput} handleData={handleData}/>: <div></div>}
-     </div>
+   <Container> <Row xs={4} md={3} >{handleData!=undefined? <Results key={userInput} query={userInput} handleData={handleData}/>: <div></div>}
+    </Row></Container> 
+    </div>
   );
 }
 
