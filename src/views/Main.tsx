@@ -35,7 +35,7 @@ function Main() {
   return (
     <div>
         <SearchBar userInput={userInput} setUserInput={setUserInput} handleSubmit={handleSubmit}/>
-   <Container> <Row xs={4} md={3} >{handleData!=undefined? <Results key={userInput} query={userInput} handleData={handleData}/>: <div></div>}
+   <Container> <Row xs={1} md={3} xl={5} xxl={6} >{handleData!=undefined? <Results key={userInput} query={userInput} handleData={handleData}/>: <div></div>}
     </Row></Container> 
     </div>
   );

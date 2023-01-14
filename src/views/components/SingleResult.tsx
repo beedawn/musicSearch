@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import MusicData from "../../interfaces/MusicData";
 import {Col, Row, Card,CardBody,CardTitle,CardSubtitle,CardText,CardLink } from "reactstrap"; 
+import ReactAudioPlayer from "react-audio-player";
 function SingleResult(props:{
 song:any
 
@@ -15,7 +16,9 @@ const song = props.song;
       <Col>  
         <Card
   style={{
-    width:"100%"
+    width:"100%",
+    marginTop:"5%",
+    alignItems:"center"
   }}
 >
   <CardBody>
@@ -36,14 +39,17 @@ const song = props.song;
   />
   <CardBody>
     <CardText>
-        
-      Some quick example text to build on the card title and make up the bulk of the card‘s content.
-    </CardText>
-    <CardLink href="#">
-      Card Link
+    <ReactAudioPlayer
+  src={song.preview}
+  controls
+  style={{width:"100%"}}
+/>
+        </CardText>
+    <CardLink href={song.artist.link}>
+      Link to Artist
     </CardLink>
     <CardLink href="#">
-      Another Link
+      Preview Song
     </CardLink>
   </CardBody>
 </Card>
