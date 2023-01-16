@@ -2,12 +2,12 @@ import React from "react";
 import { useEffect, useState } from "react";
 import {Button} from 'reactstrap';
 function SearchBar(props:
-   {userInput:any, setUserInput:any, handleSubmit:any}
+   {userInput:string, setUserInput:Function, handleSubmit:Function}
   ) {
+    
  const userInput=props.userInput;
  const setUserInput=props.setUserInput;
 const handleSubmit=props.handleSubmit;
-
 
   return (
     <div className="searchBar">

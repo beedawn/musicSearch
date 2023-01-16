@@ -19,7 +19,8 @@ function Main() {
       .catch((err) => console.error(err));
   }
 
-  function handleSubmit(event: any, userInput: any) {
+  function handleSubmit(event:Event) {
+  
     callAPI();
     event.preventDefault();
   }

@@ -7,7 +7,6 @@ import {FaMoon} from 'react-icons/fa';
 
 function ThemeHandler() {
   const [darkModeTheme, setDarkModeTheme]=useState(true);
-console.log(!darkModeTheme? "darkModeTheme":"");
 return(
   
   <div className={!darkModeTheme? "darkModeTheme":""}>

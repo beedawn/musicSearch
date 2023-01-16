@@ -12,7 +12,8 @@ import {
   CardLink,
 } from "reactstrap";
 import ReactAudioPlayer from "react-audio-player";
-function SingleResult(props: { song: any }) {
+function SingleResult(props: { song: MusicData }) {
+
   const song = props.song;
   return (
     <Col>
