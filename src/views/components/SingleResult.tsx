@@ -13,7 +13,6 @@ import {
 } from "reactstrap";
 import ReactAudioPlayer from "react-audio-player";
 function SingleResult(props: { song: MusicData }) {
-
   const song = props.song;
   return (
     <Col>
@@ -31,9 +30,9 @@ function SingleResult(props: { song: MusicData }) {
           </CardSubtitle>
         </CardBody>
         <CardLink href={song.link}>
-        <img alt="Card cap" src={song.album.cover_xl} width="100%" />
-        
-        </CardLink><CardBody>
+          <img alt="Card cap" src={song.album.cover_xl} width="100%" />
+        </CardLink>
+        <CardBody>
           <CardText>
             <ReactAudioPlayer
               src={song.preview}

@@ -1,80 +1,78 @@
-.darkModeTheme{
-    background-color:rgb(23, 23, 21) ;
-    min-height:100vh;
-height:100%;
+.darkModeTheme {
+  background-color: rgb(23, 23, 21);
+  min-height: 100vh;
+  height: 100%;
 }
 
-.darkModeTheme .card{
-    background-color: rgb(110, 110, 126);
-    color:rgb(228, 228, 228);
+.darkModeTheme .card {
+  background-color: rgb(110, 110, 126);
+  color: rgb(228, 228, 228);
 }
 .darkModeTheme {
-    color:lightslategray;
+  color: lightslategray;
 }
 
-.darkModeTheme .artistName{
-    color:rgb(241, 129, 241);
+.darkModeTheme .artistName {
+  color: rgb(241, 129, 241);
 }
 
-
-.darkModeTheme a{
-    color:rgb(214, 199, 205);
+.darkModeTheme a {
+  color: rgb(214, 199, 205);
 }
 
-.darkModeTheme a:hover{
-    color:rgb(238, 245, 240);
+.darkModeTheme a:hover {
+  color: rgb(238, 245, 240);
 }
 
-
- .darkModeTheme .inputOne{
-    background-color: rgb(110, 108, 143);
-    color:rgb(244, 217, 250);
+.darkModeTheme .inputOne {
+  background-color: rgb(110, 108, 143);
+  color: rgb(244, 217, 250);
 }
 
-.darkModeTheme .inputOne::placeholder{
-    color:white;
+.darkModeTheme .inputOne::placeholder {
+  color: white;
 }
-.darkModeTheme .submitBtn{
-    background-color: rgb(34, 0, 156);
-    color:rgb(255, 255, 255);
+.darkModeTheme .submitBtn {
+  background-color: rgb(34, 0, 156);
+  color: rgb(255, 255, 255);
 }
-
 
 /* light mode theme */
 .submitBtnContainer {
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
 }
-.submitBtn{
-    margin:7px;
+.submitBtn {
+  margin: 7px;
 }
-.inputOne{border-radius:35px;
-border-width:1px;
-border-color:grey;
-padding:7px;
+.inputOne {
+  border-radius: 35px;
+  border-width: 1px;
+  border-color: grey;
+  padding: 7px;
 }
-.searchBar{
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    margin:auto;
-    padding-bottom:35px;
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 35px;
 }
 
-.togglePadding{
-    padding:5px;
+.togglePadding {
+  padding: 5px;
 }
-.artistName{
-    color:darkorchid
-    }
+.artistName {
+  color: darkorchid;
+}
 
-    a{
-        color:rgb(49, 159, 255);
-    }
+a {
+  color: rgb(49, 159, 255);
+}
 
-    a:hover{
-        color:rgb(2, 115, 214);
-    }
+a:hover {
+  color: rgb(2, 115, 214);
+}

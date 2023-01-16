@@ -19,23 +19,21 @@ function Main() {
       .catch((err) => console.error(err));
   }
 
-  function handleSubmit(event:Event) {
-  
+  function handleSubmit(event: Event) {
     callAPI();
     event.preventDefault();
   }
 
   return (
     <div className="searchBar">
-    <Container>
-<Row>
-    
-      <SearchBar
-        userInput={userInput}
-        setUserInput={setUserInput}
-        handleSubmit={handleSubmit}
-      /></Row>
-        {" "}
+      <Container>
+        <Row>
+          <SearchBar
+            userInput={userInput}
+            setUserInput={setUserInput}
+            handleSubmit={handleSubmit}
+          />
+        </Row>{" "}
         <Row xs={1} md={3} xl={5} xxl={6}>
           {handleData != undefined ? (
             <Results
