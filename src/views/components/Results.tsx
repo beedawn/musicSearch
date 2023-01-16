@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect, useState } from "react";
 import MusicData from "../../interfaces/MusicData";
 import SingleResult from "./SingleResult";
 function Results(props: { query: string; handleData: Array<MusicData> }) {

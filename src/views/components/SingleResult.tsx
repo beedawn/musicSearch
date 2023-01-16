@@ -1,9 +1,7 @@
 import React from "react";
-import { useEffect, useState } from "react";
 import MusicData from "../../interfaces/MusicData";
 import {
   Col,
-  Row,
   Card,
   CardBody,
   CardTitle,
