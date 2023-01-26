@@ -1,5 +1,6 @@
 {
   "name": "musicsearch",
+  "homepage": "https://bee.engineer/musicSearch/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
