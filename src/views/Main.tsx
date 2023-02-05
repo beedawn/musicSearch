@@ -5,8 +5,8 @@ import SearchBar from "./components/SearchBar";
 import { Container, Row, Col } from "reactstrap";
 import Options from "../secrets/Options";
 
-// Main Component returns a view that shows a search bar and the search results
-// this calls the API and returns cards to the view if there are results
+// Main Component returns a view that renders the SearchBar component and the Results component, if there are results to show.
+// this calls the API and passes the data to the Results component.
 function Main() {
   const [userInput, setUserInput] = useState("");
   const [handleData, setHandleData] = useState();
@@ -20,8 +20,7 @@ function Main() {
 
     fetch(url, options)
       .then((response) => response.json())
-      .then((response) => {setHandleData(response.data)
-      console.log(response.data)})
+      .then((response) => {setHandleData(response.data)})
       .catch((err) => console.error(err));
   }
 
@@ -43,10 +42,9 @@ function Main() {
           />
         </Row>{" "}
         <Row xs={1} md={3} xl={5} xxl={6}>
-          {handleData != undefined ? (
+          {handleData !== undefined ? (
             <Results
-              key={userInput}
-              query={userInput}
+            //   key={userInput}
               handleData={handleData}
             />
           ) : (

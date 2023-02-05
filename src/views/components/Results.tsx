@@ -1,10 +1,12 @@
 import React from "react";
 import MusicData from "../../interfaces/MusicData";
 import SingleResult from "./SingleResult";
-function Results(props: { query: string; handleData: Array<MusicData> }) {
+
+// Results takes 
+function Results(props: { handleData: Array<MusicData> }) {
   const handleData = props.handleData;
   if (!handleData) {
-    return <div>Loading</div>;
+    return <div>Loading...</div>;
   } else {
     return (
       <>

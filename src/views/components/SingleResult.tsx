@@ -6,7 +6,6 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  CardText,
   CardLink,
 } from "reactstrap";
 import ReactAudioPlayer from "react-audio-player";
@@ -14,7 +13,7 @@ function SingleResult(props: { song: MusicData }) {
   const song = props.song;
   return (
     <Col>
-      <Card
+      <Card key={song.id}
         style={{
           width: "100%",
           marginTop: "5%",
@@ -31,13 +30,11 @@ function SingleResult(props: { song: MusicData }) {
           <img alt="Card cap" src={song.album.cover_xl} width="100%" />
         </CardLink>
         <CardBody>
-          <CardText>
             <ReactAudioPlayer
               src={song.preview}
               controls
               style={{ width: "100%" }}
             />
-          </CardText>
           <CardLink href={song.artist.link}>Link to Artist</CardLink>
           <CardLink href={song.link}>Song Info</CardLink>
         </CardBody>
