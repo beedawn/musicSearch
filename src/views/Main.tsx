@@ -1,8 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Results from "./components/Results";
 import SearchBar from "./components/SearchBar";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row} from "reactstrap";
 import Options from "../secrets/Options";
 
 // Main Component returns a view that renders the SearchBar component and the Results component, if there are results to show.
@@ -44,7 +44,6 @@ function Main() {
         <Row xs={1} sm={1} md={2} lg={3} xl={4}>
           {handleData !== undefined ? (
             <Results
-            //   key={userInput}
               handleData={handleData}
             />
           ) : (

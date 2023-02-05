@@ -9,6 +9,8 @@ import {
   CardLink,
 } from "reactstrap";
 import ReactAudioPlayer from "react-audio-player";
+
+//SingleResult accepts a song object as a parameter and displays its information within a Card
 function SingleResult(props: { song: MusicData }) {
   const song = props.song;
   return (
