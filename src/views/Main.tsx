@@ -41,7 +41,7 @@ function Main() {
             handleSubmit={handleSubmit}
           />
         </Row>{" "}
-        <Row xs={1} md={3} xl={5} xxl={6}>
+        <Row xs={1} sm={1} md={2} lg={3} xl={4}>
           {handleData !== undefined ? (
             <Results
             //   key={userInput}
