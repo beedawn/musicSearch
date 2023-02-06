@@ -20,7 +20,8 @@ function SearchBar(props: {
       <form onSubmit={(e) => handleSubmit(e, userInput)}>
         <div>
           <label>
-            <input
+            <input 
+              alt="userInputTextBox"
               className="inputOne"
               type="text"
               placeholder="Search value..."
@@ -37,7 +38,8 @@ function SearchBar(props: {
             className="submitBtn"
             color="primary"
             type="button"
-            value="Submit"
+            value="Submit" 
+            name="submitButton"
             onClick={(e) => handleSubmit(e, userInput)}
           >
             Submit
