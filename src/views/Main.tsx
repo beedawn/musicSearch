@@ -4,6 +4,7 @@ import Results from "./components/Results";
 import SearchBar from "./components/SearchBar";
 import { Container, Row} from "reactstrap";
 import Options from "../secrets/Options";
+import "whatwg-fetch";
 
 // Main Component returns a view that renders the SearchBar component and the Results component, if there are results to show.
 // this calls the API and passes the data to the Results component.

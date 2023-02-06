@@ -20,7 +20,7 @@ function ThemeHandler() {
           <MDBSwitch
             id="darkMode"
             className="switch"
-            label=""
+            label="darkModeSwitch"
             onClick={() => setDarkModeTheme(!darkModeTheme)}
           />{" "}
         </div>
