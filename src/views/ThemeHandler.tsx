@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { MDBSwitch } from "mdb-react-ui-kit";
 import Main from "./Main";
 import "../styles/styles.css";
+import { Button } from "reactstrap";
 import { FaMoon } from "react-icons/fa";
 
 // ThemeHandler Compoenent. This component allows the view to switch to and from dark mode
@@ -13,16 +13,16 @@ function ThemeHandler() {
   return (
     <div className={!darkModeTheme ? "darkModeTheme" : ""}>
       <div style={{ display: "flex", padding: "10px" }}>
+     
         <div className="togglePadding">
-          <FaMoon />
-        </div>{" "}
-        <div className="togglePadding">
-          <MDBSwitch
+          <Button 
+          alt="darkModeButton"
             id="darkMode"
             className="switch"
-            label="darkModeSwitch"
             onClick={() => setDarkModeTheme(!darkModeTheme)}
-          />{" "}
+          >
+            {/* <FaMoon />  */}
+          Dark Mode</Button>{" "}
         </div>
       </div>
       <Main />

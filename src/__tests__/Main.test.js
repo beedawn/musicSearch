@@ -1,20 +1,22 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import React from 'react';
 import Main from '../views/Main';
 import '@testing-library/jest-dom';
 
-describe('App tests', () => {
-  it('should contains the search', () => {
-    render(<Main />);
-    const heading = screen.getByAltText('userInputTextBox');
-    const button = screen.getByText('Submit');
-    fireEvent.change(heading,{target:"pizza"});
+
+
+ describe('API test', () => {
+    it('api text', async ()=>{
+        render(<Main />);
+        const input = screen.getByAltText('userInputTextBox');
+   
+        const button = screen.getByText('Submit');
+        fireEvent.change(input, {target: {value: 'Good Day'}})
+    expect(input.value).toBe('Good Day');
     fireEvent.click(button);
-    expect(heading).toBeInTheDocument();
-  });
-  it('should contain submit button', () => {
-    render(<Main />);
-    const button = screen.getByText('Submit');
-    expect(button).toBeInTheDocument();
-  });
+   const image = await waitFor(()=>screen.findByAltText("Card cap"));
+    expect(image).toBeInTheDocument();
+    })
 });
+
+
