@@ -12,7 +12,8 @@ function Main() {
   const [userInput, setUserInput] = useState("");
   const [handleData, setHandleData] = useState();
   const [submitPressed, setSubmitPressed] = useState(false);
-  let [apiCalled,setApiCalled] = useState(false);
+  const [apiCalled,setApiCalled] = useState(false);
+  const [dataTotal,setDataTotal] =useState(0);
   // callAPI makes the call to rapidapi to query the input data
   // it uses the fetch method to make this request
   function callAPI() {
@@ -23,7 +24,7 @@ function Main() {
     // const url2: string = "https://shazam.p.rapidapi.com/search?term=" + userInput;
     fetch(url, options)
       .then((response) => response.json())
-      .then((response) => {setHandleData(response.data); console.log(response.data.length)})
+      .then((response) => {setHandleData(response.data);setDataTotal(response.total)})
       .catch((err) => console.error(err));
 
 
@@ -45,9 +46,11 @@ function Main() {
   // handleSubmit is a function tied to the press of the input submit button
   // this function calls callAPI and prevents the default behavior of the submit button.
   function handleSubmit(event: Event) {
+    setSubmitPressed(false);
     setApiCalled(true);
     callAPI();
-    setTimeout(()=>{setSubmitPressed(true); setApiCalled(false);},10000);
+    setSubmitPressed(true); 
+    setApiCalled(false); 
     event.preventDefault();
     
   }
@@ -63,7 +66,7 @@ function Main() {
           />
         </Row>{" "}
         
-          {submitPressed ? (handleData !== undefined ? ( 
+          {submitPressed ? (handleData !== undefined && dataTotal>0 ? (
             <Row xs={1} sm={1} md={2} lg={3} xl={4}>
             <Results
               handleData={handleData}
