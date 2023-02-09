@@ -76,3 +76,15 @@ a {
 a:hover {
   color: rgb(2, 115, 214);
 }
+
+.noResultsText{
+  width:300px;
+  margin:auto;
+}
+
+.loadingText{
+  width:50px;
+  margin:auto;
+}
+
+
