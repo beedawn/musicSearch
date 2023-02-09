@@ -49,7 +49,7 @@ function Main() {
     setSubmitPressed(false);
     setApiCalled(true);
     callAPI();
-    setSubmitPressed(true); 
+    setTimeout(()=>setSubmitPressed(true),500); 
     setApiCalled(false); 
     event.preventDefault();
     
