@@ -12,8 +12,7 @@ function Main() {
   const [userInput, setUserInput] = useState("");
   const [handleData, setHandleData] = useState();
   const [submitPressed, setSubmitPressed] = useState(false);
-  const [apiCalled,setApiCalled] = useState(false);
-  const[dataLength,setDataLength] = useState(0);
+  let [apiCalled,setApiCalled] = useState(false);
   // callAPI makes the call to rapidapi to query the input data
   // it uses the fetch method to make this request
   function callAPI() {
@@ -24,7 +23,7 @@ function Main() {
     // const url2: string = "https://shazam.p.rapidapi.com/search?term=" + userInput;
     fetch(url, options)
       .then((response) => response.json())
-      .then((response) => {setHandleData(response.data); setDataLength(response.data.length)})
+      .then((response) => {setHandleData(response.data); console.log(response.data.length)})
       .catch((err) => console.error(err));
 
 
@@ -64,12 +63,12 @@ function Main() {
           />
         </Row>{" "}
         
-          {submitPressed ? (handleData !== undefined ? ( dataLength>0 ?(
+          {submitPressed ? (handleData !== undefined ? ( 
             <Row xs={1} sm={1} md={2} lg={3} xl={4}>
             <Results
               handleData={handleData}
-            /></Row>)
-           : (<div className="noResultsText">No Results Found, please try again.</div>)): (apiCalled ? (<div className="loadingText">Loading...</div>):(<></>))):(<></>)}
+            /></Row>
+          ) : (<div className="noResultsText">No Results Found, please try again.</div>)): (apiCalled ? (<div className="loadingText">Loading...</div>):(<></>))}
        
       </Container>
     </div>
