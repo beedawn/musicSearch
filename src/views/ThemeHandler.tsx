@@ -3,8 +3,6 @@ import { useState } from "react";
 import Main from "./Main";
 import "../styles/styles.css";
 import { Button } from "reactstrap";
-import { FaMoon } from "react-icons/fa";
-
 // ThemeHandler Compoenent. This component allows the view to switch to and from dark mode
 // if the darkModeTheme variable is true, the view will change to darkmode
 // this returns the toggle for the darkmode, and the Main Component.
