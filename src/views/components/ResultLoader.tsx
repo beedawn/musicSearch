@@ -1,25 +1,27 @@
 import React from "react";
 import MusicData from "../../interfaces/MusicData";
-import SingleResult from "./SingleResult";
+import Results from "./Results";
+
 
 // Results takes an array of songs and maps over them and displays them with SingleResult Component
 // if there are no results it returns Loading...
-function Results(props: { handleData: Array<MusicData> }) {
+function ResultLoader(props: { handleData: Array<MusicData>, submitPressed:boolean }) {
   const handleData = props.handleData;
-  if(handleData.length===0){
-    return(<div>No results found, please try again.</div>)
+  if(props.submitPressed ){
+    return(<div className="noResultsText">No results found please try again.</div>)
   }
   if (!handleData) {
-    return <div>Loading...</div>;
+    
+    return <div className="loadingText">Loading...pizza</div>;
   } else {
     return (
       <>
         {handleData.map((song: MusicData) => (
-          <SingleResult key={song.id} song={song} />
+          <Results handleData={handleData} />
         ))}
       </>
     );
   }
 }
 
-export default Results;
+export default ResultLoader;

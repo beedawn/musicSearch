@@ -6,11 +6,13 @@ import { Container, Row} from "reactstrap";
 import Options from "../secrets/Options";
 import "whatwg-fetch";
 import '../styles/styles.css';
+import ResultLoader from "./components/ResultLoader";
+import MusicData from "../interfaces/MusicData";
 // Main Component returns a view that renders the SearchBar component and the Results component, if there are results to show.
 // this calls the API and passes the data to the Results component.
 function Main() {
   const [userInput, setUserInput] = useState("");
-  const [handleData, setHandleData] = useState();
+  const [handleData, setHandleData] = useState(Array<MusicData>);
   const [submitPressed, setSubmitPressed] = useState(false);
   const [apiCalled,setApiCalled] = useState(false);
   const [dataTotal,setDataTotal] =useState(0);
@@ -49,7 +51,7 @@ function Main() {
     setSubmitPressed(false);
     setApiCalled(true);
     callAPI();
-    setTimeout(()=>setSubmitPressed(true),500); 
+    setTimeout(()=>setSubmitPressed(true),10000); 
     setApiCalled(false); 
     event.preventDefault();
     
@@ -65,13 +67,8 @@ function Main() {
             handleSubmit={handleSubmit}
           />
         </Row>{" "}
-        
-          {submitPressed ? (handleData !== undefined && dataTotal>0 ? (
-            <Row xs={1} sm={1} md={2} lg={3} xl={4}>
-            <Results
-              handleData={handleData}
-            /></Row>
-          ) : (<div className="noResultsText">No Results Found, please try again.</div>)): (apiCalled ? (<div className="loadingText">Loading...</div>):(<></>))}
+        <ResultLoader handleData={handleData} submitPressed={submitPressed}/>
+         
        
       </Container>
     </div>
