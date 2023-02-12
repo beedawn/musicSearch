@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Results from "./components/Results";
 import SearchBar from "./components/SearchBar";
 import { Container, Row} from "reactstrap";
 import Options from "../secrets/Options";
@@ -14,47 +13,24 @@ function Main() {
   const [userInput, setUserInput] = useState("");
   const [handleData, setHandleData] = useState(Array<MusicData>);
   const [submitPressed, setSubmitPressed] = useState(false);
-  const [apiCalled,setApiCalled] = useState(false);
-  const [dataTotal,setDataTotal] =useState(0);
   // callAPI makes the call to rapidapi to query the input data
   // it uses the fetch method to make this request
   function callAPI() {
     const options = Options;
- 
     const url: string =
       "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + userInput;
-    // const url2: string = "https://shazam.p.rapidapi.com/search?term=" + userInput;
     fetch(url, options)
       .then((response) => response.json())
-      .then((response) => {setHandleData(response.data);setDataTotal(response.total)})
+      .then((response) => {setHandleData(response.data);})
       .catch((err) => console.error(err));
-
-
-
-      // const options2 = {
-      //   method: 'GET',
-      //   headers: {
-      //     'X-RapidAPI-Key': '7103bc01ffmsh0015f63447d9ee6p1fd9c8jsn9269fe6a285c',
-      //     'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
-      //   }
-      // };
-      
-      // fetch(url2, options2)
-      //   .then(response => response.json())
-      //   .then(response => console.log(response))
-      //   .catch(err => console.error(err));
   }
 
   // handleSubmit is a function tied to the press of the input submit button
   // this function calls callAPI and prevents the default behavior of the submit button.
   function handleSubmit(event: Event) {
     setSubmitPressed(false);
-    setApiCalled(true);
     callAPI();
-    setTimeout(()=>setSubmitPressed(true),10000); 
-    setApiCalled(false); 
     event.preventDefault();
-    
   }
 
   return (
@@ -68,8 +44,6 @@ function Main() {
           />
         </Row>{" "}
         <ResultLoader handleData={handleData} submitPressed={submitPressed}/>
-         
-       
       </Container>
     </div>
   );

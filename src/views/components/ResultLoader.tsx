@@ -11,8 +11,7 @@ function ResultLoader(props: { handleData: Array<MusicData>, submitPressed:boole
     return(<div className="noResultsText">No results found please try again.</div>)
   }
   if (!handleData) {
-    
-    return <div className="loadingText">Loading...pizza</div>;
+    return <div className="loadingText">Loading...</div>;
   } else {
     return (
       <>

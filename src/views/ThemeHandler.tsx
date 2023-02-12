@@ -13,7 +13,6 @@ function ThemeHandler() {
   return (
     <div className={!darkModeTheme ? "darkModeTheme" : ""}>
       <div style={{ display: "flex", padding: "10px" }}>
-     
         <div className="togglePadding">
           <Button 
           alt="darkModeButton"
@@ -21,8 +20,7 @@ function ThemeHandler() {
             className="switch"
             onClick={() => setDarkModeTheme(!darkModeTheme)}
           >
-            {/* <FaMoon />  */}
-          Dark Mode</Button>{" "}
+            Lights</Button>{" "}
         </div>
       </div>
       <Main />
