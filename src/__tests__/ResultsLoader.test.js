@@ -1,12 +1,12 @@
 import { render, screen} from '@testing-library/react';
 import React from 'react';
-import Results from '../views/components/Results';
+import ResultLoader from '../views/components/ResultLoader';
 import '@testing-library/jest-dom';
 
 describe('Render musicData', () => {
   it('api text', () => {
     render(
-      <Results
+      <ResultLoader
         handleData={[
           {
             album: {
@@ -55,7 +55,12 @@ describe('Render musicData', () => {
   });
 });
 
-describe('check no data',()=>{it('no data',()=>{render(<Results handleData={[]}/>);
+describe('check no data',()=>{it('no data',()=>{render(<ResultLoader handleData={[]} submitPressed={true}/>);
 const loading = screen.getByText("No results found, please try again.");
+expect(loading).toBeInTheDocument();
+})})
+
+describe('check loading',()=>{it('loading',()=>{render(<ResultLoader handleData={undefined} submitPressed={false}/>);
+const loading = screen.getByText("Loading...");
 expect(loading).toBeInTheDocument();
 })})

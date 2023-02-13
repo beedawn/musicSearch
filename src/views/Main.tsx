@@ -13,6 +13,7 @@ function Main() {
   const [userInput, setUserInput] = useState("");
   const [handleData, setHandleData] = useState(Array<MusicData>);
   const [submitPressed, setSubmitPressed] = useState(false);
+  const [apiCalled,setApiCalled] = useState(false);
   // callAPI makes the call to rapidapi to query the input data
   // it uses the fetch method to make this request
   function callAPI() {
@@ -21,15 +22,18 @@ function Main() {
       "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + userInput;
     fetch(url, options)
       .then((response) => response.json())
-      .then((response) => {setHandleData(response.data);})
+      .then((response) => {setHandleData(response.data); console.log(response.data)})
       .catch((err) => console.error(err));
   }
 
   // handleSubmit is a function tied to the press of the input submit button
   // this function calls callAPI and prevents the default behavior of the submit button.
   function handleSubmit(event: Event) {
-    setSubmitPressed(false);
+    setSubmitPressed(true);
+    setApiCalled(true);
+    // setTimeout(()=>callAPI(),5000);
     callAPI();
+    setTimeout(()=>setApiCalled(false),1250);
     event.preventDefault();
   }
 
@@ -43,7 +47,9 @@ function Main() {
             handleSubmit={handleSubmit}
           />
         </Row>{" "}
-        <ResultLoader handleData={handleData} submitPressed={submitPressed}/>
+        <Row xs={1} sm={1} md={2} lg={3} xl={4}>
+        <ResultLoader handleData={handleData} submitPressed={submitPressed} apiCalled={apiCalled}/>
+        </Row>
       </Container>
     </div>
   );

@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import React from 'react';
 import App from '../App';
 import '@testing-library/jest-dom';
@@ -6,7 +6,7 @@ import '@testing-library/jest-dom';
 describe('Theme test', () => {
   it('api text', () => {
     render(<App />);
-    const toggle = screen.getByText('Dark Mode');
+    const toggle = screen.getByText('Lights');
 
     fireEvent.click(toggle);
   });

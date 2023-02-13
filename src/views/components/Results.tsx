@@ -6,12 +6,6 @@ import SingleResult from "./SingleResult";
 // if there are no results it returns Loading...
 function Results(props: { handleData: Array<MusicData> }) {
   const handleData = props.handleData;
-  if(handleData.length===0){
-    return(<div>No results found, please try again.</div>)
-  }
-  if (!handleData) {
-    return <div>Loading...</div>;
-  } else {
     return (
       <>
         {handleData.map((song: MusicData) => (
@@ -20,6 +14,5 @@ function Results(props: { handleData: Array<MusicData> }) {
       </>
     );
   }
-}
 
 export default Results;
