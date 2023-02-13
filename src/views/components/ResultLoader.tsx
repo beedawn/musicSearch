@@ -14,7 +14,7 @@ function ResultLoader(props: { handleData: Array<MusicData>, submitPressed:boole
   }
 
   if (apiCalled) {
-    return <div className="loadingText">Loading...</div>;
+    return <div className="loadingText"><div className="loader"></div><div className="loadingText">Loading...</div></div>;
   } 
   
   if(submitPressed && !handleData&&!apiCalled){
