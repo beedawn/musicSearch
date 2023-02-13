@@ -78,12 +78,14 @@ a:hover {
 }
 
 .noResultsText{
-  width:300px;
+  width:275px;
+  text-align: center;
   margin:auto;
 }
 
 .loadingText{
-  width:50px;
+  width:275px;
+  text-align: center;
   margin:auto;
 }
 

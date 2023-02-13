@@ -55,7 +55,7 @@ describe('Render musicData', () => {
   });
 });
 
-describe('check no data',()=>{it('no data',()=>{render(<Results handleData={[]}/>);
-const loading = screen.getByText("No results found, please try again.");
+describe('check no data',()=>{it('no data',()=>{render(<Results />);
+const loading = screen.getByText("Please pass handleData to this component.");
 expect(loading).toBeInTheDocument();
 })})

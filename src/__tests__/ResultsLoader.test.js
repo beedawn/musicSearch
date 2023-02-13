@@ -6,7 +6,7 @@ import '@testing-library/jest-dom';
 describe('Render musicData', () => {
   it('api text', () => {
     render(
-      <ResultLoader
+      <ResultLoader submitPressed={true} apiCalled={false}
         handleData={[
           {
             album: {
@@ -46,7 +46,7 @@ describe('Render musicData', () => {
             title_version: 'pizza',
             type: 'pizza',
           },
-        ]}
+        ]} 
       />
     );
 
@@ -55,12 +55,12 @@ describe('Render musicData', () => {
   });
 });
 
-describe('check no data',()=>{it('no data',()=>{render(<ResultLoader handleData={[]} submitPressed={true}/>);
+describe('check no data',()=>{it('no data',()=>{render(<ResultLoader handleData={undefined} submitPressed={true} apiCalled={false}/>);
 const loading = screen.getByText("No results found, please try again.");
 expect(loading).toBeInTheDocument();
 })})
 
-describe('check loading',()=>{it('loading',()=>{render(<ResultLoader handleData={undefined} submitPressed={false}/>);
+describe('check loading',()=>{it('loading',()=>{render(<ResultLoader handleData={undefined} submitPressed={true} apiCalled={true}/>);
 const loading = screen.getByText("Loading...");
 expect(loading).toBeInTheDocument();
 })})
