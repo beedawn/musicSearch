@@ -1,4 +1,4 @@
-import { render, screen} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import React from 'react';
 import ResultLoader from '../views/components/ResultLoader';
 import '@testing-library/jest-dom';
@@ -6,7 +6,9 @@ import '@testing-library/jest-dom';
 describe('Render musicData', () => {
   it('api text', () => {
     render(
-      <ResultLoader submitPressed={true} apiCalled={false}
+      <ResultLoader
+        submitPressed={true}
+        apiCalled={false}
         handleData={[
           {
             album: {
@@ -46,7 +48,7 @@ describe('Render musicData', () => {
             title_version: 'pizza',
             type: 'pizza',
           },
-        ]} 
+        ]}
       />
     );
 
@@ -55,12 +57,30 @@ describe('Render musicData', () => {
   });
 });
 
-describe('check no data',()=>{it('no data',()=>{render(<ResultLoader handleData={undefined} submitPressed={true} apiCalled={false}/>);
-const loading = screen.getByText("No results found, please try again.");
-expect(loading).toBeInTheDocument();
-})})
+describe('check no data', () => {
+  it('no data', () => {
+    render(
+      <ResultLoader
+        handleData={undefined}
+        submitPressed={true}
+        apiCalled={false}
+      />
+    );
+    const loading = screen.getByText('No results found, please try again.');
+    expect(loading).toBeInTheDocument();
+  });
+});
 
-describe('check loading',()=>{it('loading',()=>{render(<ResultLoader handleData={undefined} submitPressed={true} apiCalled={true}/>);
-const loading = screen.getByText("Loading...");
-expect(loading).toBeInTheDocument();
-})})
+describe('check loading', () => {
+  it('loading', () => {
+    render(
+      <ResultLoader
+        handleData={undefined}
+        submitPressed={true}
+        apiCalled={true}
+      />
+    );
+    const loading = screen.getByText('Loading...');
+    expect(loading).toBeInTheDocument();
+  });
+});

@@ -16,14 +16,14 @@ describe('API test', () => {
 });
 
 describe('Form Submit Test', () => {
-    it('form submit', async () => {
-      render(<Main />);
-      const input = screen.getByAltText('userInputTextBox');
-  
-      const button = screen.getByText('Submit');
-      
-      fireEvent.change(input, { target: { value: 'Good Day' } });
-      expect(input.value).toBe('Good Day');
-      fireEvent.submit(button);
-    });
+  it('form submit', async () => {
+    render(<Main />);
+    const input = screen.getByAltText('userInputTextBox');
+
+    const button = screen.getByText('Submit');
+
+    fireEvent.change(input, { target: { value: 'Good Day' } });
+    expect(input.value).toBe('Good Day');
+    fireEvent.submit(button);
   });
+});

@@ -12,8 +12,8 @@ function ThemeHandler() {
     <div className={!darkModeTheme ? "darkModeTheme" : ""}>
       <div style={{ display: "flex", padding: "10px" }}>
         <div className="togglePadding">
-          <Button 
-          alt="darkModeButton"
+          <Button
+            alt="darkModeButton"
             id="darkMode"
             className="switch"
             onClick={() => setDarkModeTheme(!darkModeTheme)}

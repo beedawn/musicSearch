@@ -77,16 +77,16 @@ a:hover {
   color: rgb(2, 115, 214);
 }
 
-.noResultsText{
-  width:275px;
+.noResultsText {
+  width: 275px;
   text-align: center;
-  margin:auto;
+  margin: auto;
 }
 
-.loadingText{
-  width:275px;
+.loadingText {
+  width: 275px;
   text-align: center;
-  margin:auto;
+  margin: auto;
 }
 
 .loader {
@@ -95,11 +95,15 @@ a:hover {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  animation: spin .75s ease-in-out infinite;
-  margin:auto;
+  animation: spin 0.75s ease-in-out infinite;
+  margin: auto;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

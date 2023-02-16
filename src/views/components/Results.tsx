@@ -6,8 +6,8 @@ import SingleResult from "./SingleResult";
 // if there are no results it returns Loading...
 function Results(props: { handleData: Array<MusicData> }) {
   const handleData = props.handleData;
-  if(!handleData){
-    return(<>Please pass handleData to this component.</>)
+  if (!handleData) {
+    return (<>Please pass handleData to this component.</>)
   }
   else
     return (
@@ -17,6 +17,6 @@ function Results(props: { handleData: Array<MusicData> }) {
         ))}
       </>
     );
-  }
+}
 
 export default Results;

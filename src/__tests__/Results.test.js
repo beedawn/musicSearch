@@ -1,4 +1,4 @@
-import { render, screen} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import React from 'react';
 import Results from '../views/components/Results';
 import '@testing-library/jest-dom';
@@ -55,7 +55,12 @@ describe('Render musicData', () => {
   });
 });
 
-describe('check no data',()=>{it('no data',()=>{render(<Results />);
-const loading = screen.getByText("Please pass handleData to this component.");
-expect(loading).toBeInTheDocument();
-})})
+describe('check no data', () => {
+  it('no data', () => {
+    render(<Results />);
+    const loading = screen.getByText(
+      'Please pass handleData to this component.'
+    );
+    expect(loading).toBeInTheDocument();
+  });
+});

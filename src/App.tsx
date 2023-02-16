@@ -8,8 +8,8 @@ import ThemeHandler from './views/ThemeHandler';
 function App() {
   return (
     <div className="App">
-     <ThemeHandler />
-     </div>
+      <ThemeHandler />
+    </div>
   );
 }
 
