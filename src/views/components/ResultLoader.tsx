@@ -22,9 +22,9 @@ function ResultLoader(props: { handleData: Array<MusicData>, submitPressed: bool
     }
     else {
         return (
-            <div>
+            <>
                 <Results handleData={handleData} />
-            </div>
+            </>
         );
     }
 }
