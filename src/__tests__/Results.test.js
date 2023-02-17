@@ -3,6 +3,7 @@ import React from 'react';
 import Results from '../views/components/Results';
 import '@testing-library/jest-dom';
 
+// tests that cards are rendered if object is passed to Results component
 describe('Render musicData', () => {
   it('api text', () => {
     render(
@@ -54,7 +55,7 @@ describe('Render musicData', () => {
     expect(card).toBeInTheDocument();
   });
 });
-
+//check ifiResults is passed no data, should return text
 describe('check no data', () => {
   it('no data', () => {
     render(<Results />);

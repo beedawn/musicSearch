@@ -3,6 +3,7 @@ import React from 'react';
 import App from '../App';
 import '@testing-library/jest-dom';
 
+// test theme button exists and is clickable
 describe('Theme test', () => {
   it('api text', () => {
     render(<App />);
@@ -11,6 +12,7 @@ describe('Theme test', () => {
     fireEvent.click(toggle);
   });
 });
+// check that input for search is rendered
 describe('App tests', () => {
   it('should contains the search', () => {
     render(<App />);

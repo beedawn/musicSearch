@@ -1,4 +1,4 @@
-export const TestPizza = [{
+export const TestMusic= [{
   album: {
     cover: 'pizza',
     cover_big: 'pizza',
