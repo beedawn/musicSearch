@@ -47,7 +47,7 @@ function Main() {
             handleSubmit={handleSubmit}
           />
         </Row>{" "}
-        <Row xs={2} >
+        <Row xs={1} sm={1} md={2} lg={3} xl={4}>
           <ResultLoader handleData={handleData} submitPressed={submitPressed} apiCalled={apiCalled} />
         </Row>
       </Container>
