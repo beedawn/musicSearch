@@ -13,6 +13,9 @@ import ReactAudioPlayer from "react-audio-player";
 //SingleResult accepts a song object as a parameter and displays its information within a Card
 function SingleResult(props: { song: MusicData }) {
   const song = props.song;
+  if(!song){
+    return <div>ERROR: No song data passed to SingleResult.</div>
+  }
   return (
     <Col>
       <Card key={song.id}

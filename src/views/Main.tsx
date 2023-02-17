@@ -8,7 +8,7 @@ import '../styles/styles.css';
 import ResultLoader from "./components/ResultLoader";
 import MusicData from "../interfaces/MusicData";
 // Main Component returns a view that renders the SearchBar component and the Results component, if there are results to show.
-// this calls the API and passes the data to the Results component.
+// Main uses the callAPI method to call the API and passes the data to the Results component.
 function Main() {
   const [userInput, setUserInput] = useState("");
   const [handleData, setHandleData] = useState(Array<MusicData>);
@@ -16,6 +16,7 @@ function Main() {
   const [apiCalled, setApiCalled] = useState(false);
   // callAPI makes the call to rapidapi to query the input data
   // it uses the fetch method to make this request
+  // does not require parameters as the input is managed by the userInput useState hook
   function callAPI() {
     const options = Options;
     const url: string =
@@ -28,10 +29,10 @@ function Main() {
 
   // handleSubmit is a function tied to the press of the input submit button
   // this function calls callAPI and prevents the default behavior of the submit button.
+  
   function handleSubmit(event: Event) {
     setSubmitPressed(true);
     setApiCalled(true);
-    // setTimeout(()=>callAPI(),5000);
     callAPI();
     setTimeout(() => setApiCalled(false), 1250);
     event.preventDefault();

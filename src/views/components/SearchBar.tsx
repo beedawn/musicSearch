@@ -4,7 +4,7 @@ import { Button } from "reactstrap";
 // SearchBar component renders a search bar
 // it takes the userInput and setUserInput variables as parameters from the Main component through props
 // it also takes the handleSubmit function as a parameter from the Main component
-// userInput and setUserInput should be defined with useState
+// userInput and setUserInput should be defined in parent with useState
 // ex: [ userInput, setUserInput ] = useState("");
 // it uses userInput for the value of the searchbar, and setUserInput for the onChange handler of input
 // handleSubmit is used to handle the press of the submit button
