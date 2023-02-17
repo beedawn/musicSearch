@@ -1,34 +1,42 @@
+/* this file contains the various styles for the application */
+/* theme toggler styling */
+.togglePadding {
+  padding: 5px;
+}
+/* light mode styling */
+.artistName {
+  color: darkorchid;
+}
+a {
+  color: rgb(49, 159, 255);
+}
+a:hover {
+  color: rgb(2, 115, 214);
+}
+/* dark mode theme section */
 .darkModeTheme {
   background-color: rgb(23, 23, 21);
   min-height: 100vh;
   height: 100%;
+  color: lightslategray;
 }
-
 .darkModeTheme .card {
   background-color: rgb(110, 110, 126);
   color: rgb(228, 228, 228);
 }
-.darkModeTheme {
-  color: lightslategray;
-}
-
 .darkModeTheme .artistName {
   color: rgb(241, 129, 241);
 }
-
 .darkModeTheme a {
   color: rgb(214, 199, 205);
 }
-
 .darkModeTheme a:hover {
   color: rgb(238, 245, 240);
 }
-
 .darkModeTheme .inputOne {
   background-color: rgb(110, 108, 143);
   color: rgb(244, 217, 250);
 }
-
 .darkModeTheme .inputOne::placeholder {
   color: white;
 }
@@ -36,8 +44,7 @@
   background-color: rgb(34, 0, 156);
   color: rgb(255, 255, 255);
 }
-
-/* light mode theme */
+/* submit button styling */
 .submitBtnContainer {
   margin: auto;
   display: flex;
@@ -48,12 +55,14 @@
 .submitBtn {
   margin: 7px;
 }
+/* input styling for search bar */
 .inputOne {
   border-radius: 35px;
   border-width: 1px;
   border-color: grey;
   padding: 7px;
 }
+/* entire search bar div */
 .searchBar {
   display: flex;
   justify-content: center;
@@ -61,34 +70,19 @@
   margin: auto;
   padding-bottom: 35px;
 }
-
-.togglePadding {
-  padding: 5px;
-}
-.artistName {
-  color: darkorchid;
-}
-
-a {
-  color: rgb(49, 159, 255);
-}
-
-a:hover {
-  color: rgb(2, 115, 214);
-}
-
+/* no search results styling */
 .noResultsText {
   width: 275px;
   text-align: center;
   margin: auto;
 }
-
+/* loading styling */
 .loadingText {
   width: 275px;
   text-align: center;
   margin: auto;
 }
-
+/* loader animation styling */
 .loader {
   border: 8px solid #f3f3f3; /* Light grey */
   border-top: 8px solid #424242; /* Blue */
@@ -98,7 +92,7 @@ a:hover {
   animation: spin 0.75s ease-in-out infinite;
   margin: auto;
 }
-
+/* loader animation */
 @keyframes spin {
   0% {
     transform: rotate(0deg);

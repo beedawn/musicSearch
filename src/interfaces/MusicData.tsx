@@ -1,3 +1,7 @@
+
+// this interface is based on the object returned from the deezer api
+
+
 interface MusicData {
   album: {
     cover: string;
