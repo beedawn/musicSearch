@@ -11,6 +11,8 @@ import {
 import ReactAudioPlayer from "react-audio-player";
 
 //SingleResult accepts a song object as a parameter and displays its information within a Card
+// It also displays a song preview with the ReactAudioPlayer library
+// if no song is available it displays an error message
 function SingleResult(props: { song: MusicData }) {
   const song = props.song;
   if(!song){

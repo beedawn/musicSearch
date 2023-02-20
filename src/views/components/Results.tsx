@@ -3,7 +3,7 @@ import MusicData from "../../interfaces/MusicData";
 import SingleResult from "./SingleResult";
 
 // Results takes an array of songs and maps over them and displays them with SingleResult Component
-// if there are no results it returns Loading...
+// if there are no results it returns a message stating to pass data to this component
 function Results(props: { handleData: Array<MusicData> }) {
   const handleData = props.handleData;
   if (!handleData) {
