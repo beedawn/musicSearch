@@ -13,7 +13,7 @@ function ResultLoader(props: { handleData: Array<MusicData>, submitPressed: bool
     }
 
     if (apiCalled) {
-        return <div className="loadingText"><div className="loader"></div><div className="loadingText">Loading...</div></div>;
+        return <div className="loadingText jump"><div className="loader "></div><div className="loadingText jump">Loading...</div></div>;
     }
     if ((submitPressed && !handleData && !apiCalled) || handleData.length === 0) {
         return (<div className="noResultsText">No results found, please try again.</div>)
