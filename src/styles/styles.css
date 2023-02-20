@@ -103,16 +103,17 @@ a:hover {
 }
 /* loading styling */
 .loadingText {
-  width: 275px;
-  text-align: center;
+  width: 75px;
   margin: auto;
+  justify-content: center;
   margin-top:25px;
 }
 /* darkmode loading styling */
 .darkModeTheme .loadingText {
   color:white;
-  width: 275px;
-  text-align: center;
+  width: 75px;
+
+  justify-content: center;
   margin: auto;
   margin-top:25px;
 }
