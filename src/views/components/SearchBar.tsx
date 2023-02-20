@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import { Button } from "reactstrap";
 
 // SearchBar component renders a search bar
@@ -15,13 +15,13 @@ function SearchBar(props: {
   error:string;
   setError:Function;
 }) {
-  const { userInput, setUserInput, handleSubmit,error, setError } = props;
+  const { userInput, setUserInput, handleSubmit, setError } = props;
   
   // This function accepts the user input event and validates that it is not blank
   // if user input is blank, error state is set to "Please enter valid input" and this error is displayed to the user in the Main
   function validateInput(e:any){
     e.preventDefault();
-    if(userInput!==""){handleSubmit(e, userInput); setError("");}else{setError("Please enter valid input")}
+    if(userInput!==""&&userInput!==" "){handleSubmit(e, userInput); setError("");}else{setError("Please enter valid input")}
   
   }
   return (

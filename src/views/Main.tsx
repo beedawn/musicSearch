@@ -15,6 +15,8 @@ function Main() {
   const [submitPressed, setSubmitPressed] = useState(false);
   const [apiCalled, setApiCalled] = useState(false);
   const [error,setError]=useState("");
+
+  
   // callAPI makes the call to rapidapi to query the input data
   // it uses the fetch method to make this request
   // does not require parameters as the input is managed by the userInput useState hook
@@ -32,6 +34,7 @@ function Main() {
   // this function calls callAPI and prevents the default behavior of the submit button.
   
   function handleSubmit(event: Event) {
+  
     setSubmitPressed(true);
     setApiCalled(true);
     callAPI();
@@ -43,7 +46,7 @@ function Main() {
     <div className="searchBar">
       <Container>
         <Row>
-        {error===""?<></>:<Row className="error jump">{error}</Row>}
+        {error===""?<></>:<Row  className="error jump">{error}</Row>}
         
           <SearchBar
             userInput={userInput}
