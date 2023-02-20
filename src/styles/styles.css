@@ -7,14 +7,14 @@
 .artistName {
   color: darkorchid;
 }
- 
+ /* light theme link color */
 a {
   color: rgb(49, 159, 255);
 }
+/* light theme link hover color */
 a:hover {
   color: rgb(2, 115, 214);
 }
-
 /* dark mode theme section */
 .darkModeTheme {
   background-color: rgb(23, 23, 21);
@@ -22,31 +22,38 @@ a:hover {
   height: 100%;
   color: lightslategray;
 }
+/* dark mode theme card */
 .darkModeTheme .card {
   background-color: rgb(110, 110, 126);
   color: rgb(228, 228, 228);
-
 }
+/* dark mode theme artist name */
 .darkModeTheme .artistName {
   color: rgb(241, 129, 241);
 }
+/* dark mode theme link */
 .darkModeTheme a {
   color: rgb(214, 199, 205);
 }
+/* dark mode theme hover */
 .darkModeTheme a:hover {
   color: rgb(238, 245, 240);
 }
+/* dark mode theme input */
 .darkModeTheme .inputOne {
   background-color: rgb(110, 108, 143);
   color: rgb(244, 217, 250);
 }
+/* dark mode theme placeholder text */
 .darkModeTheme .inputOne::placeholder {
   color: white;
 }
+/* dark mode theme submit button */
 .darkModeTheme .submitBtn {
   background-color: rgb(34, 0, 156);
   color: rgb(255, 255, 255);
 }
+/* dark mode theme loading animation */
 .darkModeTheme .loader {
   border: 8px solid #f3f3f3; /* Light grey */
   border-top: 8px solid #424242; /* Blue */
@@ -59,9 +66,8 @@ a:hover {
   0 0 10px 5px #fff,  /* inner white */
   0 0 25px 15px #f0f, /* middle magenta */
   0 0 45px 22px #0ff; /* outer cyan */
-
 }
-/* submit button styling */
+/* submit button container styling */
 .submitBtnContainer {
   margin: auto;
   display: flex;
@@ -69,6 +75,7 @@ a:hover {
   justify-content: center;
   width: 0;
 }
+/* submit button styling */
 .submitBtn {
   margin: 7px;
 }
@@ -101,7 +108,6 @@ a:hover {
   margin: auto;
   margin-top:25px;
 }
-
 /* darkmode loading styling */
 .darkModeTheme .loadingText {
   color:white;
@@ -124,10 +130,7 @@ a:hover {
   0 0 10px 5px #000,  /* inner white */
   0 0 25px 15px rgb(87,32,112), /* middle magenta */
   0 0 45px 22px rgb(177,176,176); /* outer cyan */
-
-
 }
-
 /* loader animation */
 @keyframes spin {
   0% {
@@ -167,15 +170,14 @@ a:hover {
   0 0 20px 10px #fff,  /* inner white */
   0 0 50px 30px #f0f, /* middle magenta */
   0 0 70px 45px #0ff; /* outer cyan */
-
 }
-
-/* swaying animation */
+/* swaying animation for loader and error message */
 @keyframes jump {
   0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
   40%  {transform: translate3d(0,7%,0) scale3d(1.02,1,1);}
   100% {transform: translate3d(0,10%,0) scale3d(1,1,1);}
 }
+/* swaying animation class for loader and error message */
 .jump {
   transform-origin: 50% 50%;
   animation: jump .5s linear alternate infinite;
