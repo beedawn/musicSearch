@@ -14,6 +14,7 @@ function Main() {
   const [handleData, setHandleData] = useState(Array<MusicData>);
   const [submitPressed, setSubmitPressed] = useState(false);
   const [apiCalled, setApiCalled] = useState(false);
+  const [error,setError]=useState("");
   // callAPI makes the call to rapidapi to query the input data
   // it uses the fetch method to make this request
   // does not require parameters as the input is managed by the userInput useState hook
@@ -46,8 +47,11 @@ function Main() {
             userInput={userInput}
             setUserInput={setUserInput}
             handleSubmit={handleSubmit}
+            error={error}
+            setError={setError}
           />
         </Row>{" "}
+        {error===""?<></>:<Row className="error">{error}</Row>}
         <Row xs={1} sm={1} md={2} lg={3} xl={4}>
           <ResultLoader handleData={handleData} submitPressed={submitPressed} apiCalled={apiCalled} />
         </Row>

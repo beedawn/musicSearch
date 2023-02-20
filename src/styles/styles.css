@@ -101,3 +101,10 @@ a:hover {
     transform: rotate(360deg);
   }
 }
+.error{
+  width:200px;
+  margin:auto;
+  color:white;
+  background-color: red;
+  padding:20px;
+}

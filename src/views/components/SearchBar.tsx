@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Button } from "reactstrap";
 
 // SearchBar component renders a search bar
@@ -12,12 +12,19 @@ function SearchBar(props: {
   userInput: string;
   setUserInput: Function;
   handleSubmit: Function;
+  error:string;
+  setError:Function;
 }) {
-  const { userInput, setUserInput, handleSubmit } = props;
-
+  const { userInput, setUserInput, handleSubmit,error, setError } = props;
+  
+  function validateInput(e:any){
+    e.preventDefault();
+    if(userInput!==""){handleSubmit(e, userInput); setError("");}else{setError("Please enter valid input")}
+  
+  }
   return (
     <div className="searchBar">
-      <form onSubmit={(e) => handleSubmit(e, userInput)}>
+      <form onSubmit={(e) => validateInput(e)}>
         <div>
           <label>
             <input
@@ -34,13 +41,13 @@ function SearchBar(props: {
           </label>
         </div>
         <div className="submitBtnContainer">
-          <Button
+          <Button disable={userInput!==""}
             className="submitBtn"
             color="primary"
             type="button"
             value="Submit"
             name="submitButton"
-            onClick={(e) => handleSubmit(e, userInput)}
+            onClick={(e) => {validateInput(e)}}
           >
             Submit
           </Button>
