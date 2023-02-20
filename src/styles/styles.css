@@ -7,12 +7,14 @@
 .artistName {
   color: darkorchid;
 }
+ 
 a {
   color: rgb(49, 159, 255);
 }
 a:hover {
   color: rgb(2, 115, 214);
 }
+
 /* dark mode theme section */
 .darkModeTheme {
   background-color: rgb(23, 23, 21);
@@ -23,6 +25,7 @@ a:hover {
 .darkModeTheme .card {
   background-color: rgb(110, 110, 126);
   color: rgb(228, 228, 228);
+
 }
 .darkModeTheme .artistName {
   color: rgb(241, 129, 241);
