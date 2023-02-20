@@ -58,6 +58,7 @@ a:hover {
 /* input styling for search bar */
 .inputOne {
   border-radius: 35px;
+  margin-top:20px;
   border-width: 1px;
   border-color: grey;
   padding: 7px;
@@ -102,9 +103,22 @@ a:hover {
   }
 }
 .error{
-  width:200px;
+  width:150px;
   margin:auto;
+  font-size:12px;
   color:white;
   background-color: red;
-  padding:20px;
+  padding:5px;
+  border-radius:5px;
+  justify-content: center;
+}
+
+@keyframes jump {
+  0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+  40%  {transform: translate3d(0,30%,0) scale3d(.7,1.5,1);}
+  100% {transform: translate3d(0,100%,0) scale3d(1.5,.7,1);}
+}
+.jump {
+  transform-origin: 50% 50%;
+  animation: jump .5s linear alternate 1;
 }

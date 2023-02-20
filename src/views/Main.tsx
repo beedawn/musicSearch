@@ -43,6 +43,8 @@ function Main() {
     <div className="searchBar">
       <Container>
         <Row>
+        {error===""?<></>:<Row className="error jump">{error}</Row>}
+        
           <SearchBar
             userInput={userInput}
             setUserInput={setUserInput}
@@ -51,8 +53,7 @@ function Main() {
             setError={setError}
           />
         </Row>{" "}
-        {error===""?<></>:<Row className="error">{error}</Row>}
-        <Row xs={1} sm={1} md={2} lg={3} xl={4}>
+       <Row xs={1} sm={1} md={2} lg={3} xl={4}>
           <ResultLoader handleData={handleData} submitPressed={submitPressed} apiCalled={apiCalled} />
         </Row>
       </Container>
