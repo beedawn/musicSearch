@@ -7,9 +7,9 @@ import { Button } from "reactstrap";
 // if the darkModeTheme variable is true, the view will change to darkmode
 // this returns the toggle for the darkmode, and the Main Component.
 function ThemeHandler() {
-  const [darkModeTheme, setDarkModeTheme] = useState(true);
+  const [darkModeTheme, setDarkModeTheme] = useState(false);
   return (
-    <div className={!darkModeTheme ? "darkModeTheme" : ""}>
+    <div className={darkModeTheme ? "darkModeTheme" : ""}>
       <div style={{ display: "flex", padding: "10px" }}>
         <div className="togglePadding">
           <Button
