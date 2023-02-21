@@ -63,9 +63,9 @@ a:hover {
   animation: spin 0.75s ease-in-out infinite;
   margin: auto;
   box-shadow:
-  0 0 10px 5px #fff,  /* inner white */
-  0 0 25px 15px #f0f, /* middle magenta */
-  0 0 45px 22px #0ff; /* outer cyan */
+  0 0 3px 1px #fff,  /* inner white */
+  0 0 6px 3px #f0f, /* middle magenta */
+  0 0 11px 6px #0ff; /* outer cyan */
 }
 /* submit button container styling */
 .submitBtnContainer {
@@ -128,9 +128,9 @@ a:hover {
   animation: spin 0.75s ease-in-out infinite;
   margin: auto;
   box-shadow:
-  0 0 10px 5px #000,  /* inner white */
-  0 0 25px 15px rgb(87,32,112), /* middle magenta */
-  0 0 45px 22px rgb(177,176,176); /* outer cyan */
+  0 0 5px 2px #000,  /* inner white */
+  0 0 12px 6px rgb(87,32,112), /* middle magenta */
+  0 0 22px 11px rgb(177,176,176); /* outer cyan */
 }
 /* loader animation */
 @keyframes spin {
@@ -152,9 +152,9 @@ a:hover {
   border-radius:5px;
   justify-content: center;
   box-shadow:
-  0 0 20px 10px #000,  /* inner white */
-  0 0 50px 30px rgb(87, 32, 112), /* middle magenta */
-  0 0 70px 45px rgb(177, 176, 176); /* outer cyan */
+  0 0 10px 5px #000,  /* inner white */
+  0 0 25px 15px rgb(87, 32, 112), /* middle magenta */
+  0 0 35px 22px rgb(177, 176, 176); /* outer cyan */
 
 }
 /* dark mode error message styling */
@@ -168,9 +168,9 @@ a:hover {
   border-radius:5px;
   justify-content: center;
   box-shadow:
-  0 0 20px 10px #fff,  /* inner white */
-  0 0 50px 30px #f0f, /* middle magenta */
-  0 0 70px 45px #0ff; /* outer cyan */
+  0 0 10px 5px #fff,  /* inner white */
+  0 0 25px 15px #f0f, /* middle magenta */
+  0 0 35px 22px #0ff; /* outer cyan */
 }
 /* swaying animation for loader and error message */
 @keyframes jump {
