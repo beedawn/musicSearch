@@ -7,9 +7,8 @@ import SingleResult from "./SingleResult";
 function Results(props: { handleData: Array<MusicData> }) {
   const handleData = props.handleData;
   if (!handleData) {
-    return (<div>Please pass handleData to this component.</div>)
-  }
-  else
+    return <div>Please pass handleData to this component.</div>;
+  } else
     return (
       <>
         {handleData.map((song: MusicData) => (

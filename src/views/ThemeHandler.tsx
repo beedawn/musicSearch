@@ -18,7 +18,8 @@ function ThemeHandler() {
             className="switch"
             onClick={() => setDarkModeTheme(!darkModeTheme)}
           >
-            Lights</Button>{" "}
+            Lights
+          </Button>{" "}
         </div>
       </div>
       <Main />

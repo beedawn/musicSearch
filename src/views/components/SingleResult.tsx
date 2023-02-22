@@ -15,12 +15,13 @@ import ReactAudioPlayer from "react-audio-player";
 // if no song is available it displays an error message
 function SingleResult(props: { song: MusicData }) {
   const song = props.song;
-  if(!song){
-    return <div>ERROR: No song data passed to SingleResult.</div>
+  if (!song) {
+    return <div>ERROR: No song data passed to SingleResult.</div>;
   }
   return (
     <Col>
-      <Card key={song.id}
+      <Card
+        key={song.id}
         style={{
           width: "100%",
           marginTop: "5%",
