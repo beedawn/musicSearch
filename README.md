@@ -33,9 +33,7 @@ npm start
 
 ## Authors
 
-Contributors names and contact info
-
-ex. Bee Schmersal  
+Bee Schmersal  
 
 
 ## Version History
