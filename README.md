@@ -10,7 +10,7 @@ This is a simple front end for the Deezer API, it allows you to search for artis
 
 ### Dependencies
 
-* node must be installed https://nodejs.org/en
+* node must be installed https://nodejs.org/
   
 
 ### Installing
